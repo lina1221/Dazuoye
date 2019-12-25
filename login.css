@@ -1,0 +1,235 @@
+/*
+* @Author: 李娜
+* @Date:   2019-12-24 19:21:41
+* @Last Modified by:   李娜
+* @Last Modified time: 2019-12-25 19:03:38
+*/
+ul,li{
+	list-style: none;
+}
+li{
+	height: 90px;
+}
+/* 漂浮 */
+
+/* 爱心 */
+.like-wrap {
+	/* top: 80%; */
+    height: 10%;
+    color: #ccc;
+    cursor: pointer;
+/* user-select: none; */
+    }
+
+.like {
+  position: fixed;
+  color: #ccc;
+  user-select: none;
+}
+
+/* 导航 */
+.nav {
+	min-height: 83vh;
+	width: 180px;
+	background: #9fbaa8;
+	border-radius: 0 0 10px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: stretch;
+	transition: 0.4s;
+	position: relative;
+	left: -180px;
+}
+.nav::before {
+	content: 'Assign';
+	width: 100px;
+	height: 50px;
+	border-radius: 0 8px 8px 0;
+	background: #ddd;
+	position: absolute;
+	top: 0px;
+	right: -100px;
+	font-family: '宋体';
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+	color: #82cc;
+}
+.nav:hover {
+	left: 0;
+}
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.btn{
+  border: none;
+  margin: 20px;
+  padding:25px;
+  width: 180px;
+  /* position: relative; */
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+}
+.btn a{
+	color: #82ccdd;
+	text-decoration: none;
+	font-size: 16px;
+	transition: 0.4s;
+	font-family: '宋体';
+}
+.btn a:hover {
+	font-size: 20px;
+	color: white;
+}
+.btn1{
+  background-image: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+}
+
+.btn2{
+  background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+}
+
+.btn3{
+  background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+
+.btn4{
+  background-image: linear-gradient(to left,#FDA7DF,#9980FA,#FDA7DF);
+}
+.btn5{
+  background-image: linear-gradient(to left,#EE5A24,#12CBC4,#0652DD);
+}
+.btn:hover{
+  background-position: right;
+}
+
+
+/* 搜索 */
+.search-box {
+	position: absolute;
+	top: 10%;
+	left: 87%;
+	transform: translate(-50%, -50%);
+	background: #2f3640;
+	height: 20px;
+	border-radius: 20px;
+	padding: 7px;
+}
+.search-btn {
+	color: #e84118;
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #2f3640;
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s; */
+	text-decoration: none;
+} 
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 20px;
+	width: 0;
+}
+.search-box:hover > .search-txt {
+	width: 130px;
+	padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+	background: white;
+}
+/* 中间 */
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+}
+.image {
+	width: 700px;
+	height: 360px;
+	overflow: hidden;
+	cursor: pointer;
+	}
+.image img {
+	width: 100%;
+	height: 100%;
+}
+.image-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	box-sizing: border-box;
+}
+.image-content h1 {
+	color: #fff;
+	text-transform: uppercase;
+	/* transform: translateY(10px); */
+	transition: 0.4s;
+}
+.image:hover .image-content h1 {
+	transform: translateY(-20px);
+}
+.icons {
+	position: absolute;
+	right: 40px;
+	bottom: 40px;
+}
+.icon {
+	text-decoration: none;
+	color: #333;
+	font-size: 22px;
+	margin: 0 10px;
+	transform: translateY(80px);
+}
+.image:hover .icon {
+transform: translateY(0px);
+}
+.icon:nth-child(1) {
+	transition: transform 0.4s 0.05s, color 0.4s;
+}
+.icon:nth-child(2) {
+	transition: transform 0.4s 0.1s, color 0.4s;
+}
+.icon:nth-child(3) {
+	transition: transform 0.4s 0.15s, color 0.4s;
+}
+.icon:hover {
+	color: red;
+}
+.image-content::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.7);
+	width: 100%;
+	height: 0;
+	clip-path: polygon(0 100%, 100% 0, 100% 100%);
+	transition: 0.5s;
+}
+.image-content:hover::before {
+	height: 140px;
+}
